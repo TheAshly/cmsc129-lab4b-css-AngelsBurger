@@ -1,39 +1,192 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
 * {
-    width: 100%;
-}
-
-table {
-    width: 100%;
-}
-
-td {
-    max-width: 12%;
-    width: 100px;
-}
-
-.coffeeImg {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  margin: 0;
 }
 
 body {
-    background-color: lightblue;
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
-.about {
-    background-color: lightgreen;
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-/* 
-LABORATORY EXERCISE #4
-Your task is to edit this CSS file and design the different web pages (delete the dummy/test code). 
-You are NOT allowed to modify/change the HTML files.
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
 
-Tips: 
-1. There are some elements that have no classes at all (such as the list of steps in making coffee), to style them, 
-you can use contextual selectors or attribute selectors to select them for styling
-2. Just with any web design project, it's best to draft a wireframe first before you start working with the CSS.
-3. You do not have to select all the classes/ids in the web pages; 
-the main goal is to create a website that is both visually appealing and user-friendly.
-*/
+body * {
+  border: solid 1px red;
+}
+
+hr {
+  width: 600px;
+  margin: auto;
+}
+
+.navBar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 2%;
+  background: white;
+}
+.navBar a {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  padding: 0px 10px;
+  margin: 0px 1%;
+}
+
+#banner {
+  position: relative;
+  top: -100px;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  filter: brightness(40%);
+}
+
+header {
+  position: absolute;
+  top: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  font-size: 4vw;
+  line-height: 10vw;
+  text-align: center;
+  color: white;
+}
+header hr {
+  color: white;
+}
+
+#welcome {
+  position: absolute;
+  top: 36vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  font-size: 1.5vw;
+  text-align: center;
+  color: white;
+}
+
+a[href="#bottomPage"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 42vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.home div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 75px;
+}
+.home div:nth-of-type(2) h2 {
+  text-align: center;
+}
+.home div:nth-of-type(2) ol {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  gap: 20px 10%;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin-top: 50px;
+  list-style: none;
+}
+.home div:nth-of-type(2) ol li {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.home div:nth-of-type(3) {
+  float: left;
+  width: 30%;
+  margin: 0 5% 0 17.5%;
+  margin-top: 75px;
+  font-size: 1.2rem;
+}
+.home div:nth-of-type(4) {
+  padding: 75px 0px 75px;
+}
+.home > a[href="order.html"] {
+  position: absolute;
+  top: 2350px;
+  left: 17.5%;
+}
+.home > a[href="order.html"] button {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+.home div:nth-of-type(5) {
+  padding: 50px 0px 75px;
+  width: 100%;
+  padding: 50px 15%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.home div:nth-of-type(5) .definition {
+  margin-bottom: 20px;
+}
+.home div:nth-of-type(5) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.home footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=Lab4.css.map */
